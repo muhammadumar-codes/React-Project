@@ -1,95 +1,69 @@
 import "./Users.css";
-
-// States 
-
 import { useEffect, useState } from "react";
-
-// Axios
-import  axios from "axios";
-
-// components
-import Button from "../Button/Button"
-
+import axios from "axios";
+import Button from "../Button/Button";
 
 export default function Users() {
-const [Users,SetUsers]=useState(null)
-const [IsLoading,SetLoading]=useState(true)
-const [IsError,SetError]=useState(false)
+  const [Users, SetUsers] = useState(null);
+  const [IsLoading, SetLoading] = useState(true);
+  const [IsError, SetError] = useState(false);
 
-
-  useEffect(()=>{
-
-    async function UserData () {
-      
+  useEffect(() => {
+    async function UserData() {
       try {
-        const  responce=await axios.get("https://jsonplaceholder.typicode.com/users")
-        const  Data=responce.data
-        SetLoading(false)
-        SetError(false)
-        SetUsers(Data)
-
-        console.log(Data)
+        const responce = await axios.get("https://jsonplaceholder.typicode.com/users");
+        const Data = responce.data;
+        SetLoading(false);
+        SetError(false);
+        SetUsers(Data);
+        console.log(Data);
       } catch (error) {
-        SetError(true)
-        SetLoading(false)
-        console.log(error)
-
+        SetError(true);
+        SetLoading(false);
+        console.log(error);
       }
-      
     }
-
     UserData();
-    
-  },[])
+  }, []);
 
-
-  // Show Loading And  Error While Fetching the data
- if (IsError) {
-  return (
-    <div style={{ textAlign: "center", marginTop: "50px" }}>
-      <h2 style={{ color: "red" }}>⚠️ Oops! Something went wrong.</h2>
-      <p>Check your internet connection or try again later.</p>
-
-    </div>
-  );
-}
-
- if (IsLoading) {
-  return (
-    <div style={{ textAlign: "center", marginTop: "50px" }}>
-      <h2 style={{ color: "#0073e6" }}>⏳ Please wait...</h2>
-      <p>We’re fetching your data. This won’t take long!</p>
-      <Button className="button-logout">Reload</Button>
-    </div>
-  );
-}
-
-    
-  return <>
-  <div className="card-container">
-    {
-    Users.map(item=>{
-
-      return (
-        <>
-        <div className="card" key={`ID :${item.id} : Name ${item.name}`}>
-
-        <h1>ID   : {item.id}</h1>
-        <h5>Name : {item.name}</h5>
-        <p>Email : {item.email}</p>
-
-        </div>
-        </>
-      )
-
-    })
+  // Error Message
+  if (IsError) {
+    return (
+      <div className="status-message error">
+        <h2>⚠️ Oops! Something went wrong</h2>
+        <p>Unable to load user data. Please check your internet connection or try again later.</p>
+        <Button onClick={() => window.location.reload()} className="reload-btn">
+          🔄 Reload
+        </Button>
+      </div>
+    );
   }
-  
-  
-  
-  </div>
-  
-  
-  
-  </>;
+
+  // Loading Message
+  if (IsLoading) {
+    return (
+      <div className="status-message loading">
+        <h2>⏳ Loading Users...</h2>
+        <p>Fetching data, please wait a moment.</p>
+      </div>
+    );
+  }
+
+  // Data UI
+  return (
+    <>
+      <h1 className="page-title">👥 Teachers</h1>
+      <div className="card-container">
+        {Users.map((item) => (
+          <div className="card" key={item.id}>
+            <h2>{item.name}</h2>
+            <p><b>ID:</b> {item.id}</p>
+            <p><b>Email:</b> {item.email}</p>
+            <p><b>Username:</b> {item.username}</p>
+            <p><b>City:</b> {item.address.city}</p>
+          </div>
+        ))}
+      </div>
+    </>
+  );
 }
