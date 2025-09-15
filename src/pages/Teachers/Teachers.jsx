@@ -7,8 +7,12 @@ export default function Teachers(){
     return (
         <>
         
-        
-        <Users/>
+     
+          
+     <Users/>
+                     
+    
+     
         </>
     )
 }

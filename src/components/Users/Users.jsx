@@ -1,12 +1,26 @@
 import "./Users.css";
+
+// icons
+import { FaChalkboardTeacher } from "react-icons/fa";
+
+// hooks
 import { useEffect, useState } from "react";
+
+// Library
 import axios from "axios";
+
+// components
 import Button from "../Button/Button";
 
 export default function Users() {
   const [Users, SetUsers] = useState(null);
   const [IsLoading, SetLoading] = useState(true);
   const [IsError, SetError] = useState(false);
+  const [Card,SetCard]=useState(null)
+
+
+
+
 
   useEffect(() => {
     async function UserData() {
@@ -52,18 +66,24 @@ export default function Users() {
   // Data UI
   return (
     <>
-      <h1 className="page-title">👥 Teachers</h1>
+      <h1 className="page-title"><FaChalkboardTeacher size={40} /> Teachers</h1>
       <div className="card-container">
         {Users.map((item) => (
-          <div className="card" key={item.id}>
-            <h2>{item.name}</h2>
+          <div className="card-container" key={item.id}>
+
+         <div className="card" onClick={()=>{SetCard(item)}} >
+             <h2>{item.name}</h2>
             <p><b>ID:</b> {item.id}</p>
             <p><b>Email:</b> {item.email}</p>
             <p><b>Username:</b> {item.username}</p>
             <p><b>City:</b> {item.address.city}</p>
+
+         </div>
           </div>
+
         ))}
       </div>
+  
     </>
   );
 }
