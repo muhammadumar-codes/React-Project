@@ -10,6 +10,7 @@ import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import NotFOund from "./pages/NotFound/NotFound"
+import Teachers from "./pages/Teachers/Teachers"
 
 // Layout
 
@@ -31,6 +32,7 @@ return (
 <Route index element={<Home/>}></Route>
 <Route path="/About" element={<About/>}></Route>
 <Route path="/Contact" element={<Contact/>}></Route>
+<Route path="/Teachers" element={<Teachers/>}></Route>
 <Route path="*" element={<NotFOund/>}></Route>
 </Route>
 </Routes>
