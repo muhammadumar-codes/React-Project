@@ -22,16 +22,16 @@ export default function Footer (){
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="registration.html">Registration</a></li>
+        <li><a href="contact.html">Teachers</a></li>
+       
       </ul>
     </div>
 
  
     <div class="footer-contact">
       <h3>Contact Us</h3>
-      <p>Email: info@mycollege.com</p>
-      <p>Phone: +92 300 1234567</p>
+      <p>Email: muhammadumar.codes@gmail.com</p>
+      <p>Phone: +92 3010568885</p>
       <p>Address: Peshawar, Pakistan</p>
     </div>
 
