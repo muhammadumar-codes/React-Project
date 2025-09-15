@@ -65,25 +65,46 @@ export default function Users() {
 
   // Data UI
   return (
-    <>
-      <h1 className="page-title"><FaChalkboardTeacher size={40} /> Teachers</h1>
+  <>
+    <h1 className="page-title">
+      <FaChalkboardTeacher size={40} /> Teachers
+    </h1>
+
+    <div className="layout">
+      {/* Left Side: Cards */}
       <div className="card-container">
         {Users.map((item) => (
-          <div className="card-container" key={item.id}>
-
-         <div className="card" onClick={()=>{SetCard(item)}} >
-             <h2>{item.name}</h2>
+          <div
+            className="card"
+            key={item.id}
+            onClick={() => {
+              SetCard(item);
+            }}
+          >
+            <h2>{item.name}</h2>
             <p><b>ID:</b> {item.id}</p>
             <p><b>Email:</b> {item.email}</p>
             <p><b>Username:</b> {item.username}</p>
             <p><b>City:</b> {item.address.city}</p>
-
-         </div>
           </div>
-
         ))}
       </div>
-  
-    </>
-  );
-}
+
+      {/* Right Side: Selected Card */}
+      <div className="selected-card">
+        {Card ? (
+          <>
+            <h2>👨‍🏫 {Card.name}</h2>
+            <p><b>Email:</b> {Card.email}</p>
+            <p><b>Username:</b> {Card.username}</p>
+            <p><b>Phone:</b> {Card.phone}</p>
+            <p><b>Website:</b> {Card.website}</p>
+            <p><b>City:</b> {Card.address.city}</p>
+          </>
+        ) : (
+          <p className="placeholder">👉 Click on a teacher card to view details</p>
+        )}
+      </div>
+    </div>
+  </>
+)}

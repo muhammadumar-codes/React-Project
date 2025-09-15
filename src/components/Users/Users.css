@@ -12,12 +12,7 @@
   gap: 15px;
   padding: 20px;
 }
-.teacher-cards-container{
-  display: grid;
-  grid-template-columns: 8fr  4fr;
-  gap: 10px;
-  width: 100%;
-}
+
 .card {
   background: #ffffff;
   text-align: left;
@@ -84,4 +79,30 @@ box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 
 
 .reload-btn:hover {
   background: #005bb5;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* Left = cards, Right = selected card */
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Right Side Card */
+.selected-card {
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  height: fit-content;
+}
+
+.selected-card h2 {
+  margin-bottom: 15px;
+  color: #0073e6;
+}
+
+.placeholder {
+  color: #777;
+  font-style: italic;
 }
