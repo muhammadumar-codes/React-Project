@@ -1,31 +1,24 @@
-
-
 import "./header.css";
-import {NavLink} from  "react-router-dom"
-
-
+import { NavLink } from "react-router-dom";
 
 export default function Header() {
   return (
     <>
-      <header class="header">
-        <div class="logo-link-container">
-          <div class="logo">MyCollege</div>
-
-         <div>
-           <nav class="nav-links">
-            <NavLink  to={"/"}><li>Home</li></NavLink>
+      <header className="header">
+        <div className="logo-link-container">
+          <div className="logo">Muhammad Umar</div>
+          <nav className="nav-links">
+            <NavLink to={"/"}><li>Home</li></NavLink>
             <NavLink to={"/About"}><li>About</li></NavLink>
             <NavLink to={"/Contact"}><li>Contact</li></NavLink>
-
-             
-            </nav>
-         </div>
+          </nav>
         </div>
 
-        <div class="search-box">
-          <input type="text" placeholder="Search..." />
-          <button>🔍</button>
+        <div className="search-box-container">
+          <div className="search-box">
+            <input type="text" placeholder="Search..." />
+            <button>Log Out</button>
+          </div>
         </div>
       </header>
     </>
