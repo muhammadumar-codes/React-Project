@@ -81,6 +81,21 @@ box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 
   background: #005bb5;
 }
 
+.card-container a{
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+/*Layout code for  separating of cards And Selectd card */
+
 .layout {
   display: grid;
   grid-template-columns: 2fr 1fr; /* Left = cards, Right = selected card */

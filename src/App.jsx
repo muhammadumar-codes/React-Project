@@ -1,49 +1,36 @@
-
-import "./App.css"
+import "./App.css";
 
 // Routes and Route
-import {Routes ,Route} from "react-router-dom"
-
+import { Routes, Route } from "react-router-dom";
 
 // pages
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
-import NotFOund from "./pages/NotFound/NotFound"
-import Teachers from "./pages/Teachers/Teachers"
+import NotFound from "./pages/NotFound/NotFound";
+import Teachers from "./pages/Teachers/Teachers";
+import  TeacherDetailPage from  "./pages/Teachers/TeacherDetail" // 👈 import detail page
 
 // Layout
-
-import Layout from "./Layout/Layout"
-
-
-// icons 
-
-
-
-
-
-
-
-
+import Layout from "./Layout/Layout";
 
 export default function App() {
-
-return (
+  return (
     <>
-<Routes>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="contact" element={<Contact />} />
 
-<Route path="/" element={<Layout/>}>
-<Route index element={<Home/>}></Route>
-<Route path="/About" element={<About/>}></Route>
-<Route path="/Contact" element={<Contact/>}></Route>
-<Route path="/Teachers" element={<Teachers/>}></Route>
-<Route path="*" element={<NotFOund/>}></Route>
-</Route>
-</Routes>
-    
+          {/* Teachers Page With Teacher Details page */}
+          <Route path="teachers" element={<Teachers />} />
+          <Route path="teachers/:id" element={<TeacherDetailPage />} />
+
+          {/* Not Found Page */}
+          <Route path="*" element={<NotFound />} />
+        </Route>
+      </Routes>
     </>
-)
-
-
+  );
 }
