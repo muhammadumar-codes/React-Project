@@ -17,7 +17,7 @@ export default function Users() {
   const [IsLoading, SetLoading] = useState(true);
   const [IsError, SetError] = useState(false);
   const [Card,SetCard]=useState(null)
-  const [Teacher,SetTeachers]=useState(null)
+
 
 
  
