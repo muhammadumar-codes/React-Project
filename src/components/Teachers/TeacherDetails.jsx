@@ -1,8 +1,10 @@
 // axios
 import axios from "axios";
 
-// UseParams to get the id from Browser for Teacher Details
+
+// use  params for teaking the   id from urls
 import { useParams } from "react-router-dom";
+
 
 // States
 import { useState, useEffect } from "react";
@@ -13,7 +15,9 @@ import "./TeacherDetails.css";
 // exported teacehers Detials here.
 
 export default function TeacherDetail() {
-  const { id } = useParams();
+
+const {id}=useParams();
+
 
   const [Teacher, SetTeacher] = useState(null);
   const [IsError, SetError] = useState(false);

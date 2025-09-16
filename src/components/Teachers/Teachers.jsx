@@ -75,7 +75,7 @@ export default function Teachers() {
         <div className="card-container">
           {Users.map((item) => (
             <Link
-              to={`${item.id}`}
+              to={`/teachers/${item.id}`}
               key={item.id}
               className="card"
               onClick={() => SetCard(item)} // ✅ optional: agar right-side pe bhi show karna ho
@@ -84,7 +84,7 @@ export default function Teachers() {
               <p><b>ID:</b> {item.id}</p>
               <p><b>Email:</b> {item.email}</p>
               <p><b>Username:</b> {item.username}</p>
-              <p><b>City:</b> {item.address?.city}</p>
+              <p><b>City:</b> {item.address.city}</p>
               </Link>
           ))}
         </div>
