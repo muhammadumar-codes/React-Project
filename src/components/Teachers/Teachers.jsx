@@ -1,4 +1,4 @@
-import "./Users.css";
+import "./Teachers.css";
 
 // icons
 import { FaChalkboardTeacher } from "react-icons/fa";
@@ -17,9 +17,10 @@ export default function Users() {
   const [IsLoading, SetLoading] = useState(true);
   const [IsError, SetError] = useState(false);
   const [Card,SetCard]=useState(null)
+  const [Teacher,SetTeachers]=useState(null)
 
 
-
+ 
 
 
   useEffect(() => {

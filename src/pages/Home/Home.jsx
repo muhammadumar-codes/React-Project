@@ -1,6 +1,5 @@
 import "./Home.css"
 
-// components 
 
 export default function Home  (){
 
@@ -8,6 +7,7 @@ export default function Home  (){
         <>
         
         <h1 className="home-page">Home page</h1>
+
         
         
         </>

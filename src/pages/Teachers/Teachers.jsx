@@ -1,15 +1,15 @@
 import "./Teachers.css"
 
 // components
-import Users from "../../components/Users/Users"
+import Teachers from "../../components/Teachers/Teachers"
 
-export default function Teachers(){
+export default function TeachersPage(){
     return (
         <>
         
      
           
-     <Users/>
+     <Teachers/>
                      
     
      
