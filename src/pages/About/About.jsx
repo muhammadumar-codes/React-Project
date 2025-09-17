@@ -1,10 +1,15 @@
 import "./About.css"
-export default function About  (){
+
+// components
+import About from "../../components/About/About"
+
+export default function AboutPage  (){
 
     return (
         <>
         
-        <h1 className="about-page">About page</h1>
+        <About/>
+  
         
         </>
     )

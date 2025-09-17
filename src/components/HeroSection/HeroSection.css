@@ -1,0 +1,88 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+
+
+}
+.hero-section-container{
+    background-image: url("../../assets//images/col-img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 80vh;
+    border-radius: 7px;
+    
+  }
+  .overlay{
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 80vh;
+    border-radius: 7px;
+}
+
+
+.center{
+  display: flex;
+flex-direction: column;
+width: 100%;
+height: 80vh;
+justify-content: center;
+align-items: center;
+}
+
+
+.hero-content {
+  max-width: 900px;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+  font-weight: 300;
+}
+
+/* Buttons */
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.apply {
+  background: #0077b6;
+  color: #fff;
+}
+
+.apply:hover {
+  background: #023e8a;
+}
+
+.programs {
+  background: #fff;
+  color: #000;
+}
+
+.programs:hover {
+  background: #ccc;
+}
