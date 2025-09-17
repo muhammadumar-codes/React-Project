@@ -1,11 +1,16 @@
 import "./Contact.css"
-export default function Contact  (){
+
+// components 
+
+import  Contact from "../../components/Contact/Contact"
+
+export default function ContactPage  (){
 
     return (
         <>
         
-        <h1 className="contact-page">Contact page</h1>
         
+    <Contact/>
         </>
     )
 }

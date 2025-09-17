@@ -12,7 +12,7 @@ export default function About (){
     <div className="about-content">
       <h2>About Our College</h2>
       <p>
-        Founded in 1990, <b>XYZ College</b> is dedicated to academic excellence,
+        Founded in 1990, <b> Hayatabad Degree College</b> is dedicated to academic excellence,
         innovation, and student success. With highly qualified faculty and
         modern facilities, we nurture students to become leaders in their fields.
       </p>

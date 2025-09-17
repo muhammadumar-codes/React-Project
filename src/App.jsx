@@ -6,7 +6,7 @@ import { Routes, Route } from "react-router-dom";
 // pages
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
-import Contact from "./pages/Contact/Contact";
+import ContactPage from "./pages/Contact/Contact";
 import NotFound from "./pages/NotFound/NotFound";
 import Teachers from "./pages/Teachers/Teachers";
 import  TeacherDetailPage from  "./pages/Teachers/TeacherDetail" // 👈 import detail page
@@ -21,7 +21,7 @@ export default function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
-          <Route path="contact" element={<Contact />} />
+          <Route path="contact" element={<ContactPage />} />
 
           {/* Teachers Page With Teacher Details page */}
           <Route path="teachers" element={<Teachers />} />
