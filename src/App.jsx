@@ -10,9 +10,9 @@ import ContactPage from "./pages/Contact/Contact";
 import NotFound from "./pages/NotFound/NotFound";
 import Teachers from "./pages/Teachers/Teachers";
 import TeacherDetailPage from "./pages/Teachers/TeacherDetail"; 
-import PrivateRoutes from "./pages/PrivateRoutes/PrivateRoutes";
+import PrivateRoutes from "./pages/Roots/PrivateRoutes";
 import LoginPage from "./pages/Login/Login";
-import RedirectedIFAtunticated from "./pages/RedirectedIFAtunticated/RedirectedIFAtunticated";
+import RedirectedIFAtunticated from "./pages/Roots/RedirectedIFAtunticated" 
 
 // Layout
 import Layout from "./Layout/Layout";
