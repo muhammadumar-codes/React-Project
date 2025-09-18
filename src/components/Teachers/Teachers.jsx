@@ -78,7 +78,7 @@ export default function Teachers() {
               to={`/teachers/${item.id}`}
               key={item.id}
               className="card"
-              onClick={() => SetCard(item)} // ✅ optional: agar right-side pe bhi show karna ho
+              onClick={() => SetCard(item)} //  optional: agar right-side pe bhi show karna ho
               >
               <h2>{item.name}</h2>
               <p><b>ID:</b> {item.id}</p>

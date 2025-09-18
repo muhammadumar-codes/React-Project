@@ -2,7 +2,8 @@ import { useState } from "react";
 import "./Contact.css";
 
 export default function ContactPage() {
-const [showModel ,setShowModal]=useState(false)
+const [showModel,SetModel]=useState(false)
+
 
 
   const handleSubmit = (e) => {
@@ -14,14 +15,15 @@ const [showModel ,setShowModal]=useState(false)
 
     const user = { Name, Email, message };
     console.log(user);
-setShowModal(true)
+    SetModel(true)
 
 
     e.target.reset();
-      
+
     setTimeout(() => {
-      setShowModal(false)
+      SetModel(false)
     }, 3000);
+      
 
    
   };
@@ -79,12 +81,12 @@ setShowModal(true)
       </div>
 
       {/* ✅ Success Modal */}
-      {showModel && (
+      { showModel && (
         <div className="modal-overlay">
           <div className="modal">
             <h2>✅ Thank You!</h2>
             <p>Your message has been submitted successfully.</p>
-            <button onClick={() => setShowModal(false)}>Close</button>
+            <button onClick={() => SetModel(false)}>Close</button>
           </div>
         </div>
       )}
