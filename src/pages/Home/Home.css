@@ -1,4 +1,8 @@
-
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
 .hero-container{
     background-image: url("../../assets//images/col-image.jpg");
     background-size: cover;

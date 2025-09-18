@@ -1,6 +1,14 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
 /* Basic styling */
 body {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: "Poppins", Arial, sans-serif;
   background: #fdfdfd;
 }
@@ -14,7 +22,7 @@ body {
   background: linear-gradient(135deg, #2c3e50, #4ca1af);
   color: white;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-  position: sticky;
+  position: sticky; 
   top: 0;
   z-index: 1000;
 }

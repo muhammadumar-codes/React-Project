@@ -12,7 +12,7 @@ export default function Layout (){
     return (
         <>
 <Header/>
-<main className="main-card">
+<main className="layout-main-card">
 
     <Outlet/>
 

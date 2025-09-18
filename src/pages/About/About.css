@@ -1,8 +1,5 @@
-
-.about-page{
-    color: blue;
-    font-weight: bold;
-    text-align: center;
-    height: 80vh;
-    
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
 }

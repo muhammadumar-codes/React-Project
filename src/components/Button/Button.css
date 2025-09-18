@@ -1,3 +1,9 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
 .button-logout{
     margin-left: 10px;
     padding: 8px 14px;
