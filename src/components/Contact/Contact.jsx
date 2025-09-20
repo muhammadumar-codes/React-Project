@@ -1,5 +1,14 @@
+// components
+import Button  from "../Button/Button"
+
+
+// State
 import { useState } from "react";
+
+// CSS
 import "./Contact.css";
+
+// contact page
 
 export default function ContactPage() {
 const [showModel,SetModel]=useState(false)
@@ -66,7 +75,7 @@ const [showModel,SetModel]=useState(false)
               <label htmlFor="message">Your Message</label>
               <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
 
-              <button type="submit">Send Message</button>
+              <Button type ="submit"> Send Message </Button>
             </form>
           </div>
         </div>
