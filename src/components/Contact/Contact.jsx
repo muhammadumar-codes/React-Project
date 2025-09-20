@@ -1,6 +1,5 @@
 // components
-import Button  from "../Button/Button"
-
+import Button from "../Button/Button";
 
 // State
 import { useState } from "react";
@@ -11,9 +10,7 @@ import "./Contact.css";
 // contact page
 
 export default function ContactPage() {
-const [showModel,SetModel]=useState(false)
-
-
+  const [showModel, SetModel] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -24,17 +21,13 @@ const [showModel,SetModel]=useState(false)
 
     const user = { Name, Email, message };
     console.log(user);
-    SetModel(true)
-
+    SetModel(true);
 
     e.target.reset();
 
     setTimeout(() => {
-      SetModel(false)
+      SetModel(false);
     }, 3000);
-      
-
-   
   };
 
   return (
@@ -67,15 +60,33 @@ const [showModel,SetModel]=useState(false)
           <div className="contact-form">
             <form id="form" onSubmit={handleSubmit}>
               <label htmlFor="name">Your Name</label>
-              <input type="text" id="name" name="name" placeholder="Enter your name" required />
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                required
+              />
 
               <label htmlFor="email">Your Email</label>
-              <input type="email" id="email" name="email" placeholder="Enter your email" required />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+              />
 
               <label htmlFor="message">Your Message</label>
-              <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Write your message..."
+                required
+              ></textarea>
 
-              <Button type ="submit"> Send Message </Button>
+              <Button type="submit"> Send Message </Button>
             </form>
           </div>
         </div>
@@ -90,7 +101,7 @@ const [showModel,SetModel]=useState(false)
       </div>
 
       {/* ✅ Success Modal */}
-      { showModel && (
+      {showModel && (
         <div className="modal-overlay">
           <div className="modal">
             <h2>✅ Thank You!</h2>
